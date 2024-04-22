@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLADE - Forged Weapons</title>
+<style>
+    body {
+        background-color: #2b2b2b;
+        color: #d3d3d3;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #header {
+        text-align: center;
+        padding: 50px 0;
+    }
+    #header h1 {
+        font-family: 'Old English Text MT', Times, serif;
+        font-size: 48px;
+        color: #c0c0c0;
+        margin: 0;
+    }
+    #content {
+        padding: 20px;
+    }
+    .sword {
+        border: 1px solid #a9a9a9;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .sword h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+</style>
+</head>
+<body>
+<div id="header">
+    <h1>BLADE</h1>
+</div>
+<div id="content">
+    <div class="sword">
+        <h2>Broad Sword</h2>
+        <p>A classic two-handed sword, perfect for battles.</p>
+    </div>
+    <div class="sword">
+        <h2>Dagger</h2>
+        <p>A small and agile weapon, ideal for quick strikes.</p>
+    </div>
+    <div class="sword">
+        <h2>Great Axe</h2>
+        <p>A massive axe capable of cleaving through armor.</p>
+    </div>
+</div>
+<script>
+    document.addEventListener("mousemove", function(event) {
+        var stars = document.querySelectorAll('.star');
+        for (var i = 0; i < stars.length; i++) {
+            var star = stars[i];
+            var speed = star.getAttribute('data-speed');
+            var x = (event.clientX * speed) / window.innerWidth;
+            var y = (event.clientY * speed) / window.innerHeight;
+            star.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        }
+    });
+</script>
+</body>
+</html>
